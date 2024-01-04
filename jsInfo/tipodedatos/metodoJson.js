@@ -1,27 +1,22 @@
 
-// JSON.stringify
 
-// JSON.stringify para convertir objetos a JSON.
-// JSON.parse para convertir JSON de vuelta a un objeto.
+const json = '{"name":"John", "age":30}';
 
-let student = {
-    name: 'John',
-    age: 30,
-    isAdmin: false,
-    courses: ['html', 'css', 'js'],
-    spouse: null
-  };
+let obj = JSON.parse(json)
+console.log(obj)
+// let obj = JSON.parse(json, (key, value) => {
+//   if (key === 'birth') return new Date(value);
+//   return value;
+// });
 
-let json = JSON.stringify(student)
+// console.log(obj.birth);
 
-console.log(json)
+console.log(obj)
 
-let meetup = {
-    title: "Conference",
-    room: {
-      number: 23,
-      participants: ["john", "ann"]
-    }
-};
+const obj2 = {name: 'John', age: 30};
 
-console.log(JSON.stringify(meetup))
+let str = JSON.stringify(obj2)
+
+console.log(str)
+
+// En resumen, ambos métodos aceptan parámetros adicionales para más control y manejo de casos complejos.
