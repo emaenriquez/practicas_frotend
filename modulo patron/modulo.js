@@ -66,3 +66,23 @@ console.log("Después de sumar 5:", calculadora.obtenerResultado()); // Después
 
 calculadora.restar(3);
 console.log("Después de restar 3:", calculadora.obtenerResultado()); // Después de restar 3: 2
+
+
+
+let modulo = (function (){
+    let variablePrivada = 'hola mundo'
+
+    function metodoPrivado() {
+        console.log("Este es un método privado");
+    }
+
+    return {
+        metodoPublico: function () {
+            console.log('esto es un metodo publico')
+        },
+        otroMetodo: function () {
+            console.log(variablePrivada)
+            metodoPrivado()
+        }
+    }
+})
